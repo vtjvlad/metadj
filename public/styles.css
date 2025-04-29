@@ -1,0 +1,214 @@
+:root {
+    --primary-color: #2a2a2a;
+    --secondary-color: #3a3a3a;
+    --accent-color: #4a4a4a;
+    --text-color: #ffffff;
+    --highlight-color: #5a5a5a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dj-interface {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.now-playing, .upcoming {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.track-info {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+#waveform {
+    width: 100%;
+    height: 200px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.track-progress {
+    height: 5px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: var(--highlight-color);
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.upload-section {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--highlight-color);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#upload-btn {
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+.decks-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.deck {
+    flex: 1;
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.waveform {
+    height: 100px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bpm-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mixer {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.eq {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.eq-band {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.crossfader {
+    transform: rotate(-90deg);
+    width: 150px;
+    margin: 2rem 0;
+}
+
+.track-library {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.track-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.track-item {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.track-item:hover {
+    background-color: var(--highlight-color);
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 5px;
+    -webkit-appearance: none;
+    background: var(--secondary-color);
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--text-color);
+    border-radius: 50%;
+    cursor: pointer;
+} 
